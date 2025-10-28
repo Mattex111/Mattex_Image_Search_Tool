@@ -70,15 +70,6 @@ Make sure to follow the instructions inside the folder you choose to run.
 
 ---
 
-## 🔭 Coming Soon(?)
-
-- Unified version with a switch between CLIP & MobileNet
-- Better GPU/multithread indexing performance
-- Export search results as PDF or HTML
-- Cleaner UI and drag & drop improvements
-
----
-
 ## 📄 License
 
 Released under the **MIT License**.  
