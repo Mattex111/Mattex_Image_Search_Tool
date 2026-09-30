@@ -56,8 +56,17 @@ class SigLIP2Engine:
             self.dtype = torch.float32
 
         print(f"[SigLIP2Engine] Loading model '{self.model_id}' on {self.device} ({self.dtype})...")
-        self.processor = AutoProcessor.from_pretrained(self.model_id)
-        self.model = AutoModel.from_pretrained(self.model_id, dtype=self.dtype).to(self.device).eval()
+        try:
+            # Try loading from local cache first for fast offline startup without DNS retries
+            self.processor = AutoProcessor.from_pretrained(self.model_id, local_files_only=True)
+            self.model = AutoModel.from_pretrained(self.model_id, dtype=self.dtype, local_files_only=True).to(self.device).eval()
+            print(f"[SigLIP2Engine] Loaded '{self.model_id}' from local cache (offline ready).")
+        except Exception:
+            # Fallback to downloading online from HuggingFace Hub if not cached yet
+            print(f"[SigLIP2Engine] Local cache miss. Downloading '{self.model_id}' from HuggingFace Hub...")
+            self.processor = AutoProcessor.from_pretrained(self.model_id)
+            self.model = AutoModel.from_pretrained(self.model_id, dtype=self.dtype).to(self.device).eval()
+
         print(f"[SigLIP2Engine] Model loaded successfully. Vector dimension: {self.dim}")
 
     def encode_images_batch(self, image_paths: List[str]) -> List[List[float]]:
