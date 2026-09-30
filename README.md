@@ -1,76 +1,53 @@
 # 🧠 Mattex Image Search Tool
 
-A smart desktop tool for **image similarity search**, built with **PyQt5**, **MobileNetV2**, and **CLIP**.
-
-This project offers **two powerful versions** to help artists, designers, and developers manage and search large image collections — whether by visual similarity or natural language.
-
----
-
-## 🎬 Demo
-➡️ [Stop Wasting Time Searching Images – Try This Python Tool!](https://youtu.be/UU976b6hUrY?si=r2ilvNG1ahBkpYMp)
+A smart desktop tool for **image similarity search** and **natural language text search**, powered by **SigLIP**, **OpenCLIP**, **MobileNetV4**, and **PyQt**.
 
 ---
 
 ## 📦 Available Versions
 
-### 🔹 [`v1-MobileNet`](./v1-MobileNet)
+### 🚀 [`v3-SigLIP2-LanceDB`](./v3-SigLIP2-LanceDB) ⭐ *(RECOMMENDED 2026)*
 
-Image similarity search based on **visual features** using **MobileNetV2** (CNN):
+State-of-the-art multimodal vector search engine featuring Google's SigLIP 2 and LanceDB:
 
-- Extracts image embeddings with TensorFlow
-- Compares images using **cosine similarity**
-- Fast and lightweight
-- Ideal for 3D artists, interior designers, or texture managers
+- **Models**: **SigLIP 2 SO400M** (1152-dim, $384 \times 384$) & **SigLIP 2 Base** (768-dim, $256 \times 256$)
+- **Latent Space**: Unified single-space vision-language encoder with native Italian/multilingual support (>100 languages)
+- **Database**: **LanceDB Embedded Vector Store** (Apache Arrow zero-copy backend, ACID transactional)
+- **Filtering**: **SQL DataFusion Pre-filtering** for categories and subcategories
+- **GUI**: Modern dark theme PyQt5 interface with async thread pool, drag & drop, live progress, and cross-platform desktop integration
 
-➡️ [View README for v1 →](./v1-MobileNet/README.md)
+➡️ [View README for v3-SigLIP2-LanceDB →](./v3-SigLIP2-LanceDB/README.md)
 
 ---
 
-### 🔹 [`v2-Clip-Integration`](./v2-Clip-Integration)
+### 🔹 [`v2-Clip-Integration`](./v2-Clip-Integration) *(Legacy)*
 
-Experimental version with **text-based search** via **OpenAI CLIP**:
-
-- All features of v1 included
-- Search for images using **text queries**, e.g. `"modern black chair"` or `"sunset over mountain"`
-- Combines both **visual** and **textual** search in one interface
+Experimental version with text search via OpenAI CLIP ViT-B/32 + MobileNetV2.
 
 ➡️ [View README for v2 →](./v2-Clip-Integration/README.md)
 
 ---
 
-## ⚖️ Which Version Should You Use?
+### 🔹 [`v1-MobileNet`](./v1-MobileNet) *(Legacy)*
 
-| Goal                                 | Recommended Version     |
-|--------------------------------------|--------------------------|
-| Fast, reliable visual similarity search | `v1-MobileNet`           |
-| Search by **text description**         | `v2-Clip-Integration`    |
-| Both visual and text-based search      | `v2-Clip-Integration`    |
+Classic image similarity search using TensorFlow MobileNetV2.
+
+➡️ [View README for v1 →](./v1-MobileNet/README.md)
 
 ---
 
-## 🖥️ GUI Features (Both Versions)
+## ⚖️ Version Comparison
 
-- 📁 Folder-based image indexing (category + subcategory support)
-- 🧠 Feature extraction using pretrained models
-- 🔍 Cosine similarity search with ranking
-- 🖼️ Preview of results with:
-  - Thumbnail
-  - Similarity %
-  - Category / subcategory
-  - File path and quick open
-- ♻️ Smart incremental indexing (processes only new images)
-- 💾 Backup system for each indexing session
-
----
-
-## 🛠️ Requirements
-
-Each version includes its own `requirements.txt` and `README.md`.  
-Make sure to follow the instructions inside the folder you choose to run.
+| Goal | Recommended Version |
+|---|---|
+| **State-of-the-art Multilingual Text & Visual Search** | `v3-SigLIP2-LanceDB` (SigLIP 2 SO400M / Base) |
+| **Transactional Vector DB & SQL Filtering** | `v3-SigLIP2-LanceDB` (LanceDB) |
+| Legacy CLIP | `v2-Clip-Integration` |
+| Legacy MobileNetV2 | `v1-MobileNet` |
 
 ---
 
 ## 📄 License
 
 Released under the **MIT License**.  
-© 2025 Mattex — Feel free to use, modify, and share with credit. ✌️
+© 2026 Mattex — Feel free to use, modify, and share with credit. ✌️

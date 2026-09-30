@@ -1,0 +1,61 @@
+# ==========================================
+# Mattex Image Search Tool - .gitignore
+# ==========================================
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Vector Databases & Datasets
+*.db
+*.sqlite
+*.sqlite3
+*.lance
+dataset_lancedb/
+*/dataset_lancedb/
+*.npy
+*.npz
+paths.txt
+clip_paths.txt
+backup/
+
+# Debug Images & Local Datasets
+img/
+*/img/
+tmp/
+temp/
+*.tmp
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+secrets/
+credentials/
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
