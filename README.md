@@ -10,7 +10,7 @@ A smart desktop tool for **image similarity search** and **natural language text
 
 State-of-the-art multimodal vector search engine featuring Google's SigLIP 2 and LanceDB:
 
-- **Models**: **SigLIP 2 SO400M** (1152-dim, $384 \times 384$) & **SigLIP 2 Base** (768-dim, $256 \times 256$)
+- **Models**: **SigLIP 2 SO400M** (1152-dim, 384×384) & **SigLIP 2 Base** (768-dim, 256×256)
 - **Latent Space**: Unified single-space vision-language encoder with native multilingual support (>100 languages)
 - **Database**: **LanceDB Embedded Vector Store** (Apache Arrow zero-copy backend, ACID transactional)
 - **Filtering**: **SQL DataFusion Pre-filtering** for categories and subcategories

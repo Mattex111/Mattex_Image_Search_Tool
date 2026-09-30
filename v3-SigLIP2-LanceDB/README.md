@@ -8,14 +8,14 @@ Version 3 is a state-of-the-art multimodal image search engine powered by **Goog
 
 | Feature | Description |
 | :--- | :--- |
-| **Multimodal Vision-Language Engine** | Google **SigLIP 2 SO400M** (1152-dim, 384x384) & **SigLIP 2 Base** (768-dim, 256x256). |
-| **Unified Shared Latent Space** | $L_2$-normalized vector space with 100% geometric alignment for text and image queries. |
+| **Multimodal Vision-Language Engine** | Google **SigLIP 2 SO400M** (1152-dim, 384×384) & **SigLIP 2 Base** (768-dim, 256×256). |
+| **Unified Shared Latent Space** | L₂-normalized vector space with 100% geometric alignment for text and image queries. |
 | **Native Multilingual Support** | Pre-trained on WebLI covering **>100 languages** (English, Italian, French, Spanish, German, Chinese, Japanese, etc.). |
 | **Embedded Columnar Vector Store** | **LanceDB** with zero-copy Apache Arrow backend and ACID transactional guarantees. |
 | **SQL DataFusion Pre-Filtering** | Fast, indexed scalar pre-filtering (`.where("category = '...' AND subcategory = '...')`). |
-| **Composed Multimodal Search** | Search by **Image + Text Modification Prompt** ($z_{\text{composed}} = \text{normalize}(\alpha z_I + \beta z_T)$). |
-| **Fullscreen Lightbox Viewer** | Double-click preview modal with keyboard arrow navigation ($\leftarrow$ / $\rightarrow$ / `Esc`). |
-| **Duplicate Image Finder** | Automated cluster detection for duplicate or near-identical images ($\ge 95\%$ cosine similarity). |
+| **Composed Multimodal Search** | Search by **Image + Text Modification Prompt** (e.g. base image + *"in blue color"*). |
+| **Fullscreen Lightbox Viewer** | Double-click preview modal with keyboard arrow navigation (`←` / `→` / `Esc`). |
+| **Duplicate Image Finder** | Automated cluster detection for duplicate or near-identical images (≥ 95% cosine similarity). |
 | **Result Exporter** | One-click export to copy top matching images to a chosen destination directory. |
 | **LanceDB IVF-PQ Disk Indexing** | On-demand disk ANN index construction for scaling to 100,000+ images with sub-millisecond latency. |
 
