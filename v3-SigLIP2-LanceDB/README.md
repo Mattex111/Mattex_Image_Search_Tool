@@ -58,24 +58,47 @@ v3-SigLIP2-LanceDB/
 
 ## 🔧 Setup & Execution
 
-### 1. Installation
+### 1. Environment Creation & Dependencies Installation
 
+First, navigate to the `v3-SigLIP2-LanceDB` directory:
 ```bash
 cd v3-SigLIP2-LanceDB
-./venv/bin/pip install -r requirements.txt
 ```
+
+Create a virtual environment and install dependencies:
+
+- **Linux / macOS**:
+  ```bash
+  python3 -m venv venv
+  ./venv/bin/pip install -r requirements.txt
+  ```
+- **Windows (Command Prompt / PowerShell)**:
+  ```cmd
+  python -m venv venv
+  .\venv\Scripts\pip.exe install -r requirements.txt
+  ```
 
 ### 2. Running the GUI Application
 
-```bash
-./venv/bin/python3 main.py
-```
+- **Linux / macOS**:
+  ```bash
+  ./venv/bin/python3 main.py
+  ```
+- **Windows**:
+  ```cmd
+  .\venv\Scripts\python.exe main.py
+  ```
 
 ### 3. Running the Verification Test Suite
 
-```bash
-./venv/bin/python3 test_engine.py
-```
+- **Linux / macOS**:
+  ```bash
+  ./venv/bin/python3 test_engine.py
+  ```
+- **Windows**:
+  ```cmd
+  .\venv\Scripts\python.exe test_engine.py
+  ```
 
 ---
 
