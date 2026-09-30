@@ -1,6 +1,6 @@
 # 🚀 Mattex Image Search Tool — Version 3 (SigLIP 2 & LanceDB)
 
-Version 3 is a state-of-the-art multimodal image search engine powered by **Google SigLIP 2** foundation vision-language models and an embedded **LanceDB** vector store. The entire codebase and interface are **100% localized in English** and ready for GitHub open-source distribution.
+Version 3 is a state-of-the-art multimodal image search engine powered by **Google SigLIP 2** foundation vision-language models and an embedded **LanceDB** vector store.
 
 ---
 
