@@ -6,5 +6,6 @@ pyarrow>=15.0.0
 pandas>=2.0.0
 Pillow>=10.0.0
 PyQt5>=5.15.0
+send2trash>=1.8.0
 tqdm>=4.66.0
 numpy>=1.26.0
