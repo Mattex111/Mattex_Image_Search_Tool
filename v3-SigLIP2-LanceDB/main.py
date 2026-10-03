@@ -1,5 +1,21 @@
 import sys
 import os
+
+# Prevent Windows OpenMP / PyTorch DLL initialization routine failures (WinError 1114)
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
+if sys.platform == "win32":
+    # Pre-register PyTorch DLL directory in Windows DLL search paths before PyQt5 loads
+    try:
+        import torch
+        torch_lib_path = os.path.join(os.path.dirname(torch.__file__), "lib")
+        if os.path.exists(torch_lib_path) and hasattr(os, "add_dll_directory"):
+            os.add_dll_directory(torch_lib_path)
+    except Exception:
+        pass
+else:
+    import torch
+
 import json
 import shutil
 import subprocess
